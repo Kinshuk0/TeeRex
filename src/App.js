@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { useState } from 'react';
+import axios from 'axios';
+import { NavbarComponent} from './Components/NavbarComponent';
+import { Left } from './Components/Left';
+import { Right } from './Components/Right';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<div> 
+    <NavbarComponent/>
+    <div className='flex items-center justify-between px-10 py-10'>
+      <Left/>
+      <Right className="flex items-center"/>
     </div>
-  );
+</div> 
+  )
 }
-
 export default App;
